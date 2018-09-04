@@ -1,0 +1,39 @@
+<%- if error -%>
+  <div class="notification is-danger">
+    Unable to resolve ip for hostname given
+  </div>
+<%- end -%>
+
+<h1 class="title"> Now - Looking Glass </h1>
+<nav class="level">
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">ip</p>
+      <p class="title"><%= geo["query"] %></p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">org</p>
+      <p class="title"><%= geo["org"] %></p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">location</p>
+      <p class="title"><%= geo["city"] %>, <%= geo["countryCode"] %></p>
+    </div>
+  </div>
+</nav>
+<nav class="level">
+  <form action="/ping" method="POST" class="level-item has-text-centered">
+    <div class="field has-addons">
+      <div class="control">
+        <input class="input" type="text" name="ip" placeholder="ip or hostname">
+      </div>
+      <div class="control">
+        <input type="submit" value="Ping" class="button is-info">
+      </div>
+    </div>
+  </form>
+</nav>

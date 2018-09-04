@@ -1,0 +1,8 @@
+<h1 class="title"> <%= ip.ip_address.address %> </h1> 
+<p class="subtitle">
+  Count: <%= ping[:count] %> <br />
+  Success: <%= ping[:success] %> <br />
+  Fail: <%= ping[:fail] %> <br />
+  Average Response: <%= ping[:average_response].round(2) %> ms
+</p>
+<a href="/"> Back </a>

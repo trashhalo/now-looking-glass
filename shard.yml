@@ -1,0 +1,19 @@
+name: looking-glass
+version: 0.1.0
+
+authors:
+  - Stephen Solka <stephen0q@gmail.com>
+
+targets:
+  looking-glass:
+    main: src/main.cr
+
+crystal: 0.26.1
+
+license: MIT
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+  icmp:
+    github: robacarp/icmp.cr
