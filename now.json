@@ -1,3 +1,7 @@
 {
-  "alias": "looking-glass"
+  "alias": "looking-glass",
+  "type": "docker",
+  "features": {
+    "cloud": "v2"
+  }
 }
